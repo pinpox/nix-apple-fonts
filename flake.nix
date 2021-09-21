@@ -11,6 +11,12 @@
   };
 
   outputs = { self, nixpkgs, flake-utils, ... }:
+  {
+
+    overlay = final: prev: { 
+        sf-mono-font = final.callPackage self.packages.sf-mono-font { };
+    };
+  } //
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
@@ -76,7 +82,7 @@
             meta = with pkgs.lib; {
               homepage = "https://developer.apple.com/fonts/";
               description = "Apple fonts";
-              license = licenses.unfree;
+              # license = licenses.unfree;
               maintainers = [ maintainers.pinpox ];
             };
           }) sources);
