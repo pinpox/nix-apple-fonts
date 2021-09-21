@@ -1,5 +1,3 @@
-# https://devimages-cdn.apple.com/design/resources/download/SF-Pro.dmg
-# https://devimages-cdn.apple.com/design/resources/download/SF-Compact.dmg
 {
   description = "Apple fonts";
 
@@ -76,14 +74,12 @@
                     '';
 
             meta = with pkgs.lib; {
-              homepage = "https://github.com/pinpox/wallpaper-generator";
-              description =
-                "Generate wallpaper images from mathematical functions";
-              license = licenses.mit;
+              homepage = "https://developer.apple.com/fonts/";
+              description = "Apple fonts";
+              license = licenses.unfree;
               maintainers = [ maintainers.pinpox ];
             };
           }) sources);
-
-        defaultPackage = packages.sf-pro;
+        defaultPackage = packages.sf-mono;
       });
 }
