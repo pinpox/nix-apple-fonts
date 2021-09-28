@@ -36,7 +36,7 @@
           sf-mono = {
             url =
               "https://devimages-cdn.apple.com/design/resources/download/SF-Mono.dmg";
-            sha256 = "sha256-P69DHx/V0NoDcI6jrZdlhbpjrdHo8DEGT+2yg5jYw/O=";
+              sha256 = "sha256-dsQV6a7gUkCHzGoEIRPbazjxoZ8uKG+AeqKXVkYTcKk=";
           };
           sf-arabic = {
             url =
