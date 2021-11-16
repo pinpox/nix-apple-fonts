@@ -11,13 +11,12 @@
   };
 
   outputs = { self, nixpkgs, flake-utils, ... }:
-  {
+    {
 
-    overlay = final: prev: { 
+      overlay = final: prev: {
         sf-mono-font = final.callPackage self.packages.sf-mono-font { };
-    };
-  } //
-    flake-utils.lib.eachDefaultSystem (system:
+      };
+    } // flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
 
@@ -36,7 +35,7 @@
           sf-mono = {
             url =
               "https://devimages-cdn.apple.com/design/resources/download/SF-Mono.dmg";
-              sha256 = "sha256-dsQV6a7gUkCHzGoEIRPbazjxoZ8uKG+AeqKXVkYTcKk=";
+            sha256 = "sha256-8niJPk3hGfK1USIs9eoxZ6GlM4aZ7ZObmQj2Zomj+Go=";
           };
           sf-arabic = {
             url =
